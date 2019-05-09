@@ -25,7 +25,7 @@ if not api_key:
         if len(api_key) >= 5:
             print("Key too short(Did you use a Key Code by mistake?")
 
-api_key.strip()
+api_key = api_key.strip()
 format = "json"
 
 payload = {'key': api_key,
