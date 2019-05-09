@@ -13,18 +13,19 @@ import os
 api_url = "https://www.rescuetime.com/anapi/data"  # base analytic api
 # *******************************************
 # Enter your api key inside the quotes
-api_key = str()
+api_key = ""
 # example:
 # api_key = "B63_NTh2nNtFewTH5vi2WA6TgoCSmjMqzksIL1N6"
 # *******************************************
 if not api_key:
     print("Enter full api key key available at https://www.rescuetime.com/anapi/manage")
-    print("Ex: 'B63_NTh2nNtFewTH5vi2WA6TgoCSmjMqzksIL1N6'")
+    print("Ex: B63_NTh2nNtFewTH5vi2WA6TgoCSmjMqzksIL1N6")
     while len(api_key) >= 5:
         api_key = input('Full Key: ')
         if len(api_key) >= 5:
             print("Key too short(Did you use a Key Code by mistake?")
 
+api_key.strip()
 format = "json"
 
 payload = {'key': api_key,
